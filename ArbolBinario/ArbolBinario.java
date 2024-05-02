@@ -37,5 +37,6 @@ public class ArbolBinario {
            visitar(aux);
         }
     } 
-     
+     private void visitar(nodo aux){
+        System.out.print(aux.getValor() + " ");
 }
