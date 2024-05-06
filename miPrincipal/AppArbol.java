@@ -82,24 +82,28 @@ public class AppArbol{
     }
     public static void recorridoInOrden(){
         //crea un arbol binario y lo recorre inorden
-        ArbolBinario ab = insertarNodo();
+        ArbolBinario.ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido inOrden Recursivo");
         ab.inorden();
-       
+        System.out.println("\n Recorrido inOrden Iterativo");
+        ab.inordenIterativo();
     }
+
     public static void recorridoPreOrden(){
         //crea un árbol y lo recorre en preorden
         ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido preOrden Recursivo");
         ab.preorden();
-
+        System.out.println("\n Recorrido preOrden Iterativo");
+        ab.preordenIterativo();
     }
     public static void recorridoPostOrden(){
         //crea un árbol y lo recorre en postorden
         ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido postOrden Recursivo");
         ab.postorden();
-
+        System.out.println("\n Recorrido postOrden Iterativo");
+        ab.postordenIterativo();
 
     }
 }
