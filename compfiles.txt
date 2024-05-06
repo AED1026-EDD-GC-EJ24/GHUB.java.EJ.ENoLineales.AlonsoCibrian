@@ -1,6 +1,10 @@
+./pilas/Nodo.java
+./pilas/Pila.java
 ./miPrincipal/AppArbolAVL.java
 ./miPrincipal/AppArbol.java
 ./miPrincipal/AppArbolBinarioBusqueda.java
 ./miPrincipal/AppGrafos.java
 ./miPrincipal/Principal.java
 ./miTest/AppTest.java
+./ArbolBinario/ArbolBinario.java
+./ArbolBinario/Nodo.java
