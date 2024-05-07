@@ -1,3 +1,9 @@
+./arbolBinarioOrdenado/Entero.java
+./arbolBinarioOrdenado/Estudiante.java
+./arbolBinarioOrdenado/Persona.java
+./arbolBinarioOrdenado/Comparable.java
+./arbolBinarioOrdenado/ArbolBinarioOrdenado.java
+./arbolBinarioOrdenado/Nodo.java
 ./pilas/Nodo.java
 ./pilas/Pila.java
 ./miPrincipal/AppArbolAVL.java
