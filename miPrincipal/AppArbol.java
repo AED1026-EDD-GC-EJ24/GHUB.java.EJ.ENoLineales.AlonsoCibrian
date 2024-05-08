@@ -82,7 +82,7 @@ public class AppArbol{
     }
     public static void recorridoInOrden(){
         //crea un arbol binario y lo recorre inorden
-        ArbolBinario.ArbolBinario ab = insertarNodo();
+        ArbolBinario ab = insertarNodo();
         System.out.println("\n Recorrido inOrden Recursivo");
         ab.inorden();
         System.out.println("\n Recorrido inOrden Iterativo");

@@ -1,14 +1,14 @@
 package arbolBinarioOrdenado;
-
+import pilas. *;
 /**
  * ArbolBinario
  */
-public class ArbolBinarioOrdenado{
+public class ArbolBinario{
     private Nodo raiz;
-    public ArbolBinarioOrdenado(){
+    public ArbolBinario(){
         this.raiz = null;
     }
-    public ArbolBinarioOrdenado(Nodo raiz){
+    public ArbolBinario(Nodo raiz){
         this.raiz = raiz;
     
     }
@@ -116,4 +116,76 @@ public class ArbolBinarioOrdenado{
         pila1.apilar(aux);
         aux = aux.getDerecho();
     }
-}
+    //insertar un nodo en el árbol version iterativa
+    public void insertar(Object valor) throws Exception{
+       Comparable dato = (Comparable) valor;
+         Nodo nuevo = new Nodo(valor);
+        nuevo.setValor(dato);
+        if(raiz == null){
+            raiz = nuevo;
+        }else{
+            //anterior es una referencia al nodo padre de aux
+            Nodo anterior = null;
+            //aux es un auxiliar que va recorriendo los nodos desde la raíz
+            Nodo aux = raiz;
+            while(aux != null){
+                anterior = aux;
+                if(dato.EsMenor(aux.getValor()))
+                    aux = aux.getIzquierdo();
+                else if (dato.EsMayor(aux.getValor()))
+                    aux = aux.getDerecho();
+                else
+                    throw new Exception("Dato duplicado");
+            }
+            if(dato.EsMenor(anterior.getValor()))
+                anterior.setIzquierdo(nuevo);
+            else
+                anterior.setDerecho(nuevo);
+
+        }
+       
+    }
+    //insertar un nodo en el árbol version recursiva
+    public void intertar2(Object valor) throws Exception{
+        Comparable dato = (Comparable)valor;
+        raiz = insertarRec(raiz, dato);
+    }
+
+    private Nodo insertarRec(Nodo raizsub, Comparable dato) throws Exception{
+        if (raizsub == null){
+            raizsub = new Nodo(dato);
+        }else {
+            if (dato.EsMenor(raizsub.getValor())){
+               Nodo iz = insertarRec(raizsub.getIzquierdo(), dato);
+                raizsub.setIzquierdo(iz);
+            }
+            else{
+                if(dato.EsMayor(raizsub.getValor())){
+                    Nodo der = insertarRec(raizsub.getDerecho(), dato);
+                    raizsub.setDerecho(der);
+                }else{
+                    throw new Exception("Dato duplicado");
+                }
+            }
+        }  
+        return raizsub;
+    }
+    //buscar un nodo en el árbol version iterativa
+    public Nodo buscar(Object valor){
+       Comparable dato = (Comparable) valor;
+       if (raiz == null)
+           return null;
+         else{
+            Nodo aux = raiz;
+            while(aux != null)
+                if(dato.EsIgual(aux.getValor()))
+                    return aux;
+                if(dato.EsMenor(aux.getValor()))
+                    aux = aux.getIzquierdo();
+                else
+                    aux = aux.getDerecho();
+                
+            }
+            return null;
+         }
+    }

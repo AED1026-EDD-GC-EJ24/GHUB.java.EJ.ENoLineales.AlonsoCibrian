@@ -1,5 +1,4 @@
 package arbolBinarioOrdenado;
-
 /**
  * Entero
  */
