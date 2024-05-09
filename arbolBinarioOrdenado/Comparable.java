@@ -1,12 +1,9 @@
 package arbolBinarioOrdenado;
-
-/**
- * Comparable
- */
 public interface Comparable {
+    public boolean esMenor(Object q);
+    public boolean esMayor(Object q);
+    public boolean esIgual(Object q);
+    
 
-    public boolean EsMenor(Object q);
-    public boolean EsMayor(Object q);
-    public boolean EsIgual(Object q);
 
 }

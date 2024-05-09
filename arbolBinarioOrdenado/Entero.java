@@ -1,40 +1,35 @@
 package arbolBinarioOrdenado;
-/**
- * Entero
- */
 public class Entero implements Comparable{
     private int dato;
-    //constructor
     public Entero(int dato){
         this.dato = dato;
     }
     public Entero(){
         this(0);
     }
-    //getters y setters
     public int getDato(){
-        return this.dato;
+        return dato;
     }
     public void setDato(int dato){
         this.dato = dato;
     }
-    //métodos de la interfaz Comparable
-    public boolean EsMenor(Object q){
+    public boolean esIgual(Object q){
         Entero obj = (Entero)q;
-        return (dato < obj.getDato());
+        return (dato==obj.dato);
+
     }
-    public boolean EsMayor(Object q){
+    public boolean esMayor(Object q){
         Entero obj = (Entero)q;
-        return (dato > obj.getDato());
+        return (dato>obj.dato);
+        
     }
-    public boolean EsIgual(Object q){
+    public boolean esMenor(Object q){
         Entero obj = (Entero)q;
-        return (dato == obj.getDato());
+        return (dato<obj.dato);
+        
     }
-    //to string
     public String toString(){
-        return dato+"";
+        return ""+dato;
     }
 
-    
 }

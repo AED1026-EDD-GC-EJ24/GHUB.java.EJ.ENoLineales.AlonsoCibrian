@@ -1,43 +1,42 @@
 package arbolBinarioOrdenado;
-
-/**
- * Estudiante
- */
 public class Estudiante implements Comparable{
-
     private int codigo;
     private String nombre;
-    //constructor
-    public Estudiante(int codigo, String nombre){
-        this.codigo = codigo;
-        this.nombre = nombre;
+    public Estudiante(){
+
     }
-    //getters y setters
-    public int getcodigo(){
-        return this.codigo;
+    public int getCodigo(){
+        return codigo;
     }
-    public void setcodigo(int codigo){
+    public void setCodigo(int codigo){
         this.codigo = codigo;
     }
-    public String getnombre(){
-        return this.nombre;
+    public String getNombre(){
+        return nombre;
     }
-    public void setnombre(String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
-    }
-    //métodos de la interfaz Comparable
-    public boolean EsMenor(Object q){
-        Estudiante obj = (Estudiante)q;
-        return (codigo < obj.getcodigo());
-    }
-    public boolean EsMayor(Object q){
-        Estudiante obj = (Estudiante)q;
-        return (codigo > obj.getcodigo());
-    }
-    public boolean EsIgual(Object q){
-        Estudiante obj = (Estudiante)q;
-        return (codigo == obj.getcodigo());
     }
     
+    public boolean esMenor(Object q){
+        Estudiante obj =(Estudiante)q;
+        return (codigo<obj.getCodigo());
 
+    }
+    public boolean esMayor(Object q){
+        Estudiante obj =(Estudiante)q;
+        return (codigo>obj.getCodigo());
+
+    }
+    public boolean esIgual(Object q){
+        Estudiante obj =(Estudiante)q;
+        return (codigo==obj.getCodigo());
+
+    }
+
+
+
+
+
+    
 }
