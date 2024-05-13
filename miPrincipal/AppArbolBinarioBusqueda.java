@@ -109,6 +109,35 @@ public class AppArbolBinarioBusqueda{
     }
     public static void buscarNodos(){
         System.out.println("**** BUSCAR NODOS ****");
-
+        ArbolBinario arbol = new ArbolBinario();
+        try {
+            arbol.insertar(new  Entero(10));
+            arbol.insertar(new  Entero(20));
+            arbol.insertar(new  Entero(5));
+            arbol.insertar(new  Entero(30));
+            arbol.insertar(new  Entero(40));
+            arbol.insertar(new  Entero(4));
+            System.out.println();
+            System.out.println("Recorrido inOrden");
+            arbol.inorden();
+            System.out.println();
+            System.out.println("Recorrido preOrden");
+            arbol.preorden();
+            System.out.println();
+            System.out.println("Recorrido postOrden");
+            arbol.postorden();
+            System.out.println("Impresión del arbol");
+            BTreePrinter.printNode(arbol.getRaiz());
+            System.err.println("Busco que el dato 20 exista");
+            System.out.println(arbol.buscar(new Entero(20)).getValor());
+            System.err.println("Busco que el dato 11 exista");
+            System.out.println(arbol.buscar(new Entero(11)));
+            //marca error la linea de abajo porque es nulo
+           // System.out.println(arbol.buscar(new Entero(11)).getValor());
+        }
+        catch (Exception e) {
+            
+            e.printStackTrace();
+        }
     }
 }
