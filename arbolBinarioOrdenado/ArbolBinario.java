@@ -279,7 +279,6 @@ public class ArbolBinario{
                 ant.setIzquierdo(mayor.getIzquierdo());
             else
                 ant.setDerecho(mayor.getIzquierdo());
-
         }
     }
 

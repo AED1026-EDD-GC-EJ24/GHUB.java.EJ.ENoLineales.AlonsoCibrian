@@ -4,6 +4,7 @@
 ./arbolBinarioOrdenado/DemoComparable.java
 ./arbolBinarioOrdenado/Comparable.java
 ./arbolBinarioOrdenado/ArbolBinario.java
+./arbolBinarioOrdenado/BTreePrinter.java
 ./arbolBinarioOrdenado/Nodo.java
 ./pilas/Nodo.java
 ./pilas/Pila.java
