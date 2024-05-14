@@ -51,6 +51,9 @@ public class AppArbolBinarioBusqueda{
             arbol.insertar(new  Entero(30));
             arbol.insertar(new  Entero(40));
             arbol.insertar(new  Entero(4));
+            //insertar un nodo repetido
+            arbol.insertar(new  Entero(4));
+
             System.out.println();
             System.out.println("Recorrido inOrden");
             arbol.inorden();
@@ -62,7 +65,6 @@ public class AppArbolBinarioBusqueda{
             arbol.postorden();
             System.out.println("Impresión del arbol");
             BTreePrinter.printNode(arbol.getRaiz());
-
 
         } catch (Exception e) {
             
@@ -100,13 +102,16 @@ public class AppArbolBinarioBusqueda{
             arbol.eliminar(new Entero(10));
             System.out.println("Impresión del arbol despues de eliminación");
             BTreePrinter.printNode(arbol.getRaiz());
-            
-
+            //eliminar nodo del lado izquierdo
+            System.out.println("Eliminar nodo 5");
+            arbol.eliminar(new Entero(5));
+            System.out.println("Impresión del arbol despues de eliminación");
+            BTreePrinter.printNode(arbol.getRaiz());
         } catch (Exception e) {
-            
             e.printStackTrace();
         }
     }
+    
     public static void buscarNodos(){
         System.out.println("**** BUSCAR NODOS ****");
         ArbolBinario arbol = new ArbolBinario();
