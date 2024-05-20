@@ -1,4 +1,4 @@
-package ArbolAVL;
+package arbolAVL;
 
 import java.util.Objects;
 

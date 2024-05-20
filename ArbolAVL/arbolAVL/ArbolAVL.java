@@ -1,13 +1,14 @@
-package ArbolAVL;
-
+package arbolAVL;
 import pilas.Pila;
+import colas.Cola;
 
 /**
- * ArbolAVL
+ * Representa un árbol binario ordenado. Tiene las operaciones
+ * básicas: insertar, eliminar, buscar y recorridos
  */
-public class ArbolAVL {
 
-    	/**
+ public class ArbolAVL  {
+	/**
 	 * Raiz del arbol
 	 */
 	private Nodo raiz;
@@ -634,5 +635,7 @@ public class ArbolAVL {
         }
 
     }
+
+
 
 }

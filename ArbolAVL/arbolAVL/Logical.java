@@ -1,4 +1,4 @@
-package ArbolAVL;
+package arbolAVL;
 
 public class Logical {
     boolean v;

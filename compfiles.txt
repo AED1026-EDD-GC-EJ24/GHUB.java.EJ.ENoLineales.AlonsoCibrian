@@ -1,4 +1,6 @@
 ./DemoClaseTree/DemoClaseTree.java
+./colas/Nodo.java
+./colas/Cola.java
 ./arbolBinarioOrdenado/Entero.java
 ./arbolBinarioOrdenado/Estudiante.java
 ./arbolBinarioOrdenado/Persona.java
@@ -15,5 +17,11 @@
 ./miPrincipal/AppGrafos.java
 ./miPrincipal/Principal.java
 ./miTest/AppTest.java
+./ArbolAVL/arbolAVL/Entero.java
+./ArbolAVL/arbolAVL/ArbolAVL.java
+./ArbolAVL/arbolAVL/Comparable.java
+./ArbolAVL/arbolAVL/BTreePrinter.java
+./ArbolAVL/arbolAVL/Nodo.java
+./ArbolAVL/arbolAVL/Logical.java
 ./ArbolBinario/ArbolBinario.java
 ./ArbolBinario/Nodo.java

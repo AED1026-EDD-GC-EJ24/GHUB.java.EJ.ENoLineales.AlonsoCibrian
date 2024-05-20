@@ -1,4 +1,4 @@
-package ArbolAVL;
+package arbolAVL;
 
 public interface Comparable{
 	public boolean esMenor(Object q);
