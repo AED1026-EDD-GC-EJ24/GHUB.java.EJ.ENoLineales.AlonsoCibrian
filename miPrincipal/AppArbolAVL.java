@@ -1,6 +1,7 @@
 package miPrincipal;
 import arbolAVL.ArbolAVL;
 import arbolAVL.Entero;
+import arbolAVL.Nodo;
 
 import java.util.Scanner;
 
@@ -53,6 +54,7 @@ public class AppArbolAVL{
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
             abo.insertar(new Entero(20));
             arbolAVL.BTreePrinter.printNode(abo.getRaiz());
+            
         }catch(Exception e){
             System.out.println("Error: "+e.getMessage());
         }
@@ -60,10 +62,29 @@ public class AppArbolAVL{
         
     }
     public static void buscarNodo(){
-        Scanner reader = new Scanner(System.in);
         System.out.println("********************************");
         System.out.println("       BUSCAR NODO               ");
         System.out.println("********************************");
+        ArbolAVL abo = new ArbolAVL();
+        try {
+            abo.insertar(new Entero(10));
+            abo.insertar(new Entero(15));
+            abo.insertar(new Entero(30));
+            abo.insertar(new Entero(40));
+            abo.insertar(new Entero(50 ));
+            abo.insertar(new Entero(60));
+            abo.insertar(new Entero(70));
+            Nodo buscado = abo.buscar(new Entero(50));
+            System.out.println("Elemento Buscado = " + buscado.getValor());
+            buscado = abo.buscar(new Entero(100));
+            if (buscado != null) {
+                System.out.println("Elemento Buscado = " + buscado.getValor());
+            }else{
+                System.out.println("Elemento no encontrado");
+            }
+        } catch (Exception e) {
+            System.out.println("Error: "+e.getMessage());
+        }
      
     }
     public static void eliminarNodo(){

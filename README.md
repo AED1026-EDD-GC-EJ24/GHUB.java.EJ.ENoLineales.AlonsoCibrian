@@ -45,6 +45,100 @@ classDiagram
 
 ```
 
+```mermaid
+---
+title: TAD Matriz de Adyacencia de un Grafo
+---
+classDiagram
+    class GrafoMatriz{
+        +MAX_VERTICES: int
+        +INFINITO: int
+        -numVerts:int
+        -matAd[][]: int
+        -verts: Vertice[]
+        +GrafoMatriz()
+        +GrafoMatriz(tot:int)
+        +inicializarMatrizPesos():void
+        +getMatriz():int[][]
+        +nuevoVertice(nom:String)
+        -numVertice(nom:String):int
+        +nombreVertice(v:int):String
+        +nuevoArco(a:String, b:String)
+        +nuevoArco(a:String, b:String, peso:int)
+        +adyacencia(a:String, b:String):boolean
+        +adyacencia(a:int, b:int):boolean
+        +imprimirMatriz():String
+        +imprimirVertice():String
+        +numeroDeVertices():int
+        +borrarArco(a:String, b:String)
+        +borrarVertice(nom:String)
+
+        +apilar(Integer): void
+    }
+    class Vertice{
+        -nombfe: String
+        +Vertice(nombre:String)
+        +getNombre():String
+        +setNombre(nombre:String)
+        +toString():String
+    }
+    GrafoMatriz o-- Vertice: contiene
+
+
+```
+
+
+```mermaid
+---
+title: TAD Lista de Adyacencia de un Grafo
+---
+classDiagram
+    class GrafoAdcia{
+        -VectorVertices: ArrayList<VerticeAdy>
+        +GrafoAdcia()
+        +nuevoVertice(nom:String)
+        +existeVertice(nom:String):boolean
+        +nuevoArco(a:String, b:String)
+        +nuevoArco(a:String, b:String), peso:int
+        +borrarVertice(nom:String)
+        +borrarArco(a:String, b:String)
+        -buscarVertice(nom:String): VerticeAdy
+        +adyacencia(a:String, b:String):boolean
+        +imprimirListaAdyacencia():String
+        +imprimirVertices():String
+    }
+    class VerticeAdy{
+        -nombre: String
+        -lad: ArrayList<Arco
+        +VerticeAdy(nombre: String)
+        +nuevoArco(destino:String)
+        +nuevoArco(destino:String,peso:int)
+        +existeArco(destino:String):boolean
+        +borrarArco(nom:String)
+        +getNombre(): String
+        +setNombre(nombre: String): void
+        +getListaAdyacencia():String
+        +equals(n:VerticeAdy):boolean
+        +toString():String
+        
+    }
+    class Arco{
+        -destino:String
+        -peso: int
+        +Arco(destino:String)
+        +Arco(destino:String,peso: int)
+        +getDestino():String
+        +setDestino(destino:String)
+        +getPeso(): int
+        +setPeso(peso: int): void
+        +equals(n:Object):boolean
+    }
+    GrafoAdcia o-- VerticeAdy: contiene
+    VerticeAdy o-- Arco: tiene
+
+
+```
+
 
 
 [Referencia-Mermaid](https://mermaid.js.org/syntax/classDiagram.html)

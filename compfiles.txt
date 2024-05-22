@@ -1,3 +1,8 @@
+./grafos/listaAdyacencia/GrafoAdcia.java
+./grafos/listaAdyacencia/VerticeAdy.java
+./grafos/listaAdyacencia/Arco.java
+./grafos/matrizAdyacencia/GrafoMatriz.java
+./grafos/matrizAdyacencia/Vertice.java
 ./DemoClaseTree/DemoClaseTree.java
 ./colas/Nodo.java
 ./colas/Cola.java
